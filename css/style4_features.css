@@ -1,3 +1,43 @@
+.features-container .features-content .features-cards .animate__animated{
+    animation-direction: alternate;
+}
+
+.features-container .features-content .features-cards .features-item:nth-child(1) .animate__flipInY{
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.features-container .features-content .features-cards .features-item:nth-child(2) .animate__flipInY{
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.features-container .features-content .features-cards .features-item:nth-child(3) .animate__flipInY{
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.features-container .features-content .features-cards .features-item:nth-child(4) .animate__flipInY{
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.features-container .features-content .features-cards .features-item:nth-child(5) .animate__flipInY{
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.features-container .features-content .features-cards .features-item:nth-child(6) .animate__flipInY{
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
 .features-container{
     width: 100%;
     max-width: 1600px;
