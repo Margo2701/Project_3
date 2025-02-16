@@ -1,0 +1,141 @@
+@mixin adaptive($w)
+{
+    @media screen and (max-width: $w)
+    {
+        @content;
+    }
+}
+
+.section-OurBlog
+{
+    padding-top: 128px;
+    padding-bottom: 128px;
+    @include adaptive(756px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    h3
+    {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 133%;
+        color: var(--dark-blue);
+        margin-bottom: 64px;
+        @include adaptive(1200px){
+            text-align: center;
+        }
+        @include adaptive(756px){
+            margin-bottom: 35px;
+        }
+        @include adaptive(525px){
+            font-size: 40px;
+        }
+    }
+
+    .ob-cards
+    {
+        display: grid;
+        grid-template-columns: 405px 406px 405px;
+        column-gap: 32px;
+        @include adaptive(1320px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include adaptive(1200px){
+            column-gap: 20px;
+        }
+        @include adaptive(756px){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 650px);
+        }
+        @include adaptive(320px){
+            grid-template-rows: repeat(3, 700px);
+        }
+
+        .ob-img
+        {
+            width: 100%;
+            height: 285px;
+
+            img
+            {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        time
+        {
+            display: block;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 175%;
+            color: var(--dark-blue-opacity1);
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        h5
+        {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 150%;
+            color: var(--dark-blue);
+            margin-bottom: 16px;
+            @include adaptive(412px){
+                font-size: 20px;
+            }
+        }
+
+        p
+        {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            color: var(--dark-blue-opacity1);
+            margin-bottom: 32px;
+        }
+
+        a
+        {
+            text-decoration: none;
+            
+            span
+            {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 175%;
+                color: var(--dark-blue);
+                padding-right: 12px;
+            }
+
+            svg
+            {
+                width: 25px;
+                height: 12px;
+
+                path
+                {
+                    fill: #282938;
+                }
+
+            }
+
+            &:hover span
+            {
+                color: var(--royal-blue);
+                padding-right: 18px;
+                transition: .5s;
+            }
+
+            &:hover svg path
+            {
+                fill: var(--royal-blue);
+                transition: .5s;
+            }
+        }
+    }
+}

@@ -417,7 +417,9 @@ body {
     height: 100%;
 }
 
-
+@import "style2.scss";
+@import "style4_features.scss";
+@import "style8_OurBlog.scss";
 
 
 @media screen and (max-width: 1300px) {
@@ -519,6 +521,4 @@ body {
     .container-projects .projects .third-item .project-info h4 {
         width: calc(100% - 50px);
     }
-
-
 }
